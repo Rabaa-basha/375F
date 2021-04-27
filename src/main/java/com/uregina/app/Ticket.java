@@ -15,9 +15,9 @@ public class Ticket
 	 * The function checks the validaity of a ticket
 	 * It checks
 	 *		1. airports code are in IATA format (any three uppercases letters)
-	 *		2. maximum flights Count <= number of flights in the ticket
-	 *		3. maximum flight time <= Total flight times ( sum of flight time of each flight)
-	 *		4. maximum layover time <= Total layover times ( sum of layover time between each consequative flight)
+	     *          2. maximum flights Count >= number of flights in the ticket
+         *              3. maximum flight time >= Total flight times ( sum of flight time of each flight)
+               *        4. maximum layover time >= Total layover times ( sum of layover time between each two consecutive flight)
 	 *		5. no flight between two airports in the Schengen area unless the passenger has a valid SchengenVisa
 	 *		6. no cyclic trip
 	 *		7. The sequence of flights in correct ( the arrival airport of a flight is the departure airport of the next flight)
@@ -38,7 +38,43 @@ public class Ticket
 	public static boolean checkTicket( ArrayList<Flight> ticket, int maxFlightsCount, int maxFlightTime, int maxLayoverTime, boolean hasSchengenVisa)
 	{
 		//Todo: add your code here
-		
+		if(ticket.size() > maxFlightsCount){
+			return false;	
+		}
+		for(int i=0 ; i<ticket.size(); i++){
+			String oneS = ticket.get(i).getArrivalAirport();
+			String twoS = ticket.get(i).getDepatureAirport();
+			int one = ticket.get(i).calculateFlightTime();
+			int two = ticket.get(i).calculateLayoverTime();
+			
+			if(oneS.length() != 3){
+				return false;
+			}
+			for(int j=0 ; j<3; j++){
+				char a = oneS.charAt(i);
+				if(isUpperCase(a) == false){
+					return false;
+				}
+			}
+			
+			if(twoS.length() != 3){
+				return false;
+			}
+			for(int j=0 ; j<3; j++){
+				char a = twoS.charAt(i);
+				if(isUpperCase(a) == false){
+					return false;
+				}
+			}
+			
+			if(maxFlightTime < one){
+				return false;
+			}
+			
+			if(maxLayoverTime < two){
+				return false;
+			}
+		}
 
 		//end of your code
 		return true;
