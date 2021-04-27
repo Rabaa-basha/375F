@@ -49,7 +49,23 @@ public class Time24
 	{
 		Time24 time=null;
 		//Todo : add your code here
-
+		if(am_pm == AmPm.am){
+			if(hours == 12){
+				time.hours = 0;
+				time.minutes = minutes;
+			}else{
+			time.hours = hours;
+			time.minutes = minutes;
+			}
+		}else{
+			if(hours == 12){
+				time.hours = 12;
+				time.minutes = minutes;
+			}else{
+				time.hours = hours + 12; 
+				time.minutes = minutes;
+			}	
+		}
 
 		// End of your code
 		return time;
