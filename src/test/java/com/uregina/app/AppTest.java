@@ -162,7 +162,7 @@ public class AppTest
         {
 	    	Time12 time121 = new Time12( 1, 2, AmPm.pm);
 		Time12 time122 = new Time12( 2, 2, AmPm.pm);
-	    	static int answer = subtract(time121, time122);
+	    	int answer = subtract(time121, time122);
 		
 	        assertEquals( -60, answer);
 	    }
