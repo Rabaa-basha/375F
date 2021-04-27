@@ -29,8 +29,8 @@ public class AppTest
             Time24 time24 = time12.toTime24();
 	    	int hours = time24.getHours();
 	    	int minutes = time24.getMinutes();
-	        assertEquals( minutes, 40 );
-	        assertEquals( hours, 0);
+	        assertEquals( 40, minutes );
+	        assertEquals( 0, hours);
         }
         catch(InvalidTimeException e)
         {
@@ -51,8 +51,8 @@ public class AppTest
     	Time24 time24 = time12.toTime24();
     	int hours = time24.getHours();
     	int minutes = time24.getMinutes();
-        assertEquals( minutes, 40 );
-        assertEquals( hours, 1);
+        assertEquals( 40, minutes );
+        assertEquals( 2, hours);
     	}
     	catch(InvalidTimeException e)
         {
@@ -70,8 +70,8 @@ public class AppTest
 	    	Time24 time24 = time12.toTime24();
 	    	int hours = time24.getHours();
 	    	int minutes = time24.getMinutes();
-	        assertEquals( minutes, 40 );
-	        assertEquals( hours, 12);
+	        assertEquals( 40, minutes );
+	        assertEquals( 12, hours);
 	    }
 	    catch(InvalidTimeException e)
         {
@@ -89,8 +89,8 @@ public class AppTest
 	    	Time24 time24 = time12.toTime24();
 	    	int hours = time24.getHours();
 	    	int minutes = time24.getMinutes();
-	        assertEquals( minutes, 40 );
-	        assertEquals( hours, 13);
+	        assertEquals( 40, minutes );
+	        assertEquals( 13, hours);
 	    }
 	    catch(InvalidTimeException e)
         {
@@ -108,8 +108,8 @@ public class AppTest
 	    	Time24 time24 = time12.toTime24();
 	    	int hours = time24.getHours();
 	    	int minutes = time24.getMinutes();
-	        assertEquals( minutes, 59 );
-	        assertEquals( hours, 23);
+	        assertEquals( 59, minutes );
+	        assertEquals( 23, hours);
 	    }
 	    catch(InvalidTimeException e)
         {
@@ -127,8 +127,8 @@ public class AppTest
 	    	Time24 time24 = time12.toTime24();
 	    	int hours = time24.getHours();
 	    	int minutes = time24.getMinutes();
-	        assertEquals( minutes, 0 );
-	        assertEquals( hours, 0);
+	        assertEquals( 0, minutes );
+	        assertEquals( 0, hours);
    	 	}
    	 	catch(InvalidTimeException e)
         {
