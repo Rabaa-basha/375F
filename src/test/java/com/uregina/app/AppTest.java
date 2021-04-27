@@ -137,22 +137,22 @@ public class AppTest
     }
 	
 	
-    @Test
-    public void Subtract_Invalid_h1_1()
-    {
-    	try
-        {
-	    	Time12 time121 = new Time12(-25, 1, AmPm.pm);
-		Time12 time122 = new Time12(-25, -2, AmPm.pm);
-	    	int answer = subtract(time121, time122);
+//     @Test
+//     public void Subtract_Invalid_h1_1()
+//     {
+//     	try
+//         {
+// 	    	Time12 time121 = new Time12(-25, 1, AmPm.pm);
+// 		Time12 time122 = new Time12(-25, -2, AmPm.pm);
+// 	    	int answer = subtract(time121, time122);
 		
-	        assertTrue(actualMessage.contains("Invalid Time"));
-	    }
-	    catch(InvalidTimeException e)
-        {
-            System.out.println("Time");
-        }
-    }
+// 	        assertTrue(actualMessage.contains("Invalid Time"));
+// 	    }
+// 	    catch(InvalidTimeException e)
+//         {
+//             System.out.println("Time");
+//         }
+//     }
 
 	
    @Test
