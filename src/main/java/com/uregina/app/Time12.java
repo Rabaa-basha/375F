@@ -71,7 +71,7 @@ public class Time12
 	 * 		(class: Time24 , method: getHours)
 	 * 		(class: Time24 , method: getMinutes)
 	*/
-	public static int subtract(Time12 t1, Time12 t2)
+	public int subtract(Time12 t1, Time12 t2)
 	{
 		int difference=0;
 		//Todo: add your code here
