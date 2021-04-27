@@ -70,7 +70,7 @@ public class DateTime
 	 * @param 	d2 a DateTime object
 	 * @return	true if d1<d2, false otherwise
 	*/
-	public  boolean lessThan(DateTime d1, DateTime d2)
+	public static boolean lessThan(DateTime d1, DateTime d2)
 	{
 		return Date.lessThan(d1.date,d2.date) || ( Date.equal(d1.date,d2.date) && Time12.lessThan(d1.time,d2.time)) ;
 	}
