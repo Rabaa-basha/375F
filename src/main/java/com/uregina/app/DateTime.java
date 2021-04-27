@@ -53,7 +53,7 @@ public class DateTime
 		//Todo: add your code here
 		Date date = d1.getDate().nextDate();
 		if(date.getDay() - d2.getDate().getDay()<0) throw new MoreThanOneDayException();
-		if(equal(d1,d2)){
+		if(equal(d1,d2) == true){
 			return subtract(d1.time, d2.time);	
 		}else{
 			Time12 startOfDay = new Time12(12, 0, AmPm.am);
