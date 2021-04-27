@@ -104,7 +104,7 @@ public class Time12
 	 * @param 	t2 a Time12 object
 	 * @return	true if t1<t2, false otherwise
 	*/
-	public static boolean lessThan(Time12 t1,Time12 t2)
+	public boolean lessThan(Time12 t1,Time12 t2)
 	{
 		return Time12.subtract(t1,t2)<0;
 	}
