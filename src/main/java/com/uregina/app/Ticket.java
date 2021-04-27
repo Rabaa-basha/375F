@@ -41,11 +41,16 @@ public class Ticket
 		if(ticket.size() > maxFlightsCount){
 			return false;	
 		}
+		int sumOne = 0;
+		int sumTwo = 0;
 		for(int i=0 ; i<ticket.size(); i++){
 			String oneS = ticket.get(i).getArrivalAirport();
 			String twoS = ticket.get(i).getDepatureAirport();
-			int one = ticket.get(i).calculateFlightTime();
-			int two = ticket.get(i).calculateLayoverTime();
+			int sumOne = ticket.get(i).calculateFlightTime();
+			if(i<ticket.size() - 1){
+				sumTwo += Flight.calculateLayoverTime(ticket.get(i), ticket.get(i+1));
+				sumOne += ticket.get(i).calculateFlightTime();
+			}
 			
 			if(oneS.length() != 3){
 				return false;
@@ -74,6 +79,12 @@ public class Ticket
 			if(maxLayoverTime < two){
 				return false;
 			}
+		}
+		if(maxFlightTime < sumOne){
+			return false;	
+		}
+		if(maxLayoverTime < sumTwo){
+			return false;
 		}
 
 		//end of your code
