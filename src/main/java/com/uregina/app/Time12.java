@@ -75,7 +75,31 @@ public class Time12
 	{
 		int difference=0;
 		//Todo: add your code here
+		try
+        {
+		Time24 time1 = t1.toTime24();
+		Time24 time2 = t2.toTime24();
 
+		
+			int hours1 = time1.getHours();
+			int minutes1 = time1.getMinutes();
+
+			int hours2 = time2.getHours();
+			int minutes2 = time2.getMinutes();
+
+			int hoursDif = hours1 - hours2;
+			int minutesDif = minutes1 - minutes2;
+			
+
+			int hoursDifToMins = hoursdif * 60;
+
+
+			difference = hoursDifToMins + minutesDif;
+			}catch(InvalidTimeException e)
+        		 {
+          			  System.out.println("Time");
+       			 }
+		
 		// end of your code
 		return difference;
 	}
