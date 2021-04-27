@@ -53,16 +53,22 @@ public class DateTime
 		//Todo: add your code here
 		Date date = d1.getDate().nextDate();
 		if(date.getDay() - d2.getDate().getDay()<0) throw new MoreThanOneDayException();
-		if(equal(d1,d2) == true){
-			return subtract(d1.time, d2.time);	
+		if(Date.equal(d1.getDate(),d2.getDate()) == true){
+			return Time12.subtract(d1.time, d2.time);	
 		}else{
+			try
+        	{
 			Time12 startOfDay = new Time12(12, 0, AmPm.am);
-			return subtract(d1.time, startOfDay) + subtract(startOfDay, d2.time);
+			return Time12.subtract(d1.time, startOfDay) + Time12.subtract(startOfDay, d2.time);
+		}catch(InvalidTimeException e)
+        {
+            System.out.println("Time");
+        }
 		}
 			
-		
-		//end of your code
 		return diff;
+		//end of your code
+
 	}
 	/**
 	 * Convert a DateTime object to string
