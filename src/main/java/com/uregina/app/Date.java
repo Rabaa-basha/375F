@@ -110,7 +110,7 @@ public class Date
 	 * @param 	d2 a Date object
 	 * @return	true if d1==d2, false otherwise
 	*/
-	public  boolean equal(Date d1,Date d2)
+	public static boolean equal(Date d1,Date d2)
 	{
 		return (d1.day==d2.day && d1.month == d2.month && d1.year == d2.year);
 	}
@@ -120,7 +120,7 @@ public class Date
 	 * @param 	d2 a Date object
 	 * @return	true if d1<d2, false otherwise
 	*/
-	public  boolean lessThan(Date d1,Date d2)
+	public static boolean lessThan(Date d1,Date d2)
 	{
 		if(d1.getYear() < d2.getYear()){
 			return true;
