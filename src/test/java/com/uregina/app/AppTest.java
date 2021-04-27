@@ -41,24 +41,24 @@ public class AppTest
     }
 
 
-    @Test
-    public void toTime24_Am_not12()
-    {
-    	try
-        {
+    // @Test
+    // public void toTime24_Am_not12()
+    // {
+    // 	try
+    //     {
 
-    	Time12 time12 = new Time12(1, 40, AmPm.am);
-    	Time24 time24 = time12.toTime24();
-    	int hours = time24.getHours();
-    	int minutes = time24.getMinutes();
-        assertEquals( minutes, 40 );
-        assertEquals( hours, 1);
-    	}
-    	catch(InvalidTimeException e)
-        {
-            System.out.println("Time");
-        }
-    }
+    // 	Time12 time12 = new Time12(1, 40, AmPm.am);
+    // 	Time24 time24 = time12.toTime24();
+    // 	int hours = time24.getHours();
+    // 	int minutes = time24.getMinutes();
+    //     assertEquals( minutes, 40 );
+    //     assertEquals( hours, 1);
+    // 	}
+    // 	catch(InvalidTimeException e)
+    //     {
+    //         System.out.println("Time");
+    //     }
+    // }
 
 
     @Test
@@ -80,23 +80,23 @@ public class AppTest
     }
 
 
-    @Test
-    public void toTime24_Pm_not12()
-    {
-    	try
-        {
-	    	Time12 time12 = new Time12(1, 40, AmPm.pm);
-	    	Time24 time24 = time12.toTime24();
-	    	int hours = time24.getHours();
-	    	int minutes = time24.getMinutes();
-	        assertEquals( minutes, 40 );
-	        assertEquals( hours, 13);
-	    }
-	    catch(InvalidTimeException e)
-        {
-            System.out.println("Time");
-        }
-    }
+    // @Test
+    // public void toTime24_Pm_not12()
+    // {
+    // 	try
+    //     {
+	   //  	Time12 time12 = new Time12(1, 40, AmPm.pm);
+	   //  	Time24 time24 = time12.toTime24();
+	   //  	int hours = time24.getHours();
+	   //  	int minutes = time24.getMinutes();
+	   //      assertEquals( minutes, 40 );
+	   //      assertEquals( hours, 13);
+	   //  }
+	   //  catch(InvalidTimeException e)
+    //     {
+    //         System.out.println("Time");
+    //     }
+    // }
 
 
     @Test
