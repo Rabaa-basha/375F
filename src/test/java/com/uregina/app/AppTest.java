@@ -104,7 +104,7 @@ public class AppTest
     {
     	try
         {
-	    	Time12 time12 = new Time12(12, 59, AmPm.pm);
+	    	Time12 time12 = new Time12(11, 59, AmPm.pm);
 	    	Time24 time24 = time12.toTime24();
 	    	int hours = time24.getHours();
 	    	int minutes = time24.getMinutes();
