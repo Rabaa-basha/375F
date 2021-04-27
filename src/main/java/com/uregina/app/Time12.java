@@ -75,8 +75,7 @@ public class Time12
 	{
 		int difference=0;
 		//Todo: add your code here
-		try
-        {
+
 		Time24 time1 = t1.toTime24();
 		Time24 time2 = t2.toTime24();
 
@@ -95,10 +94,6 @@ public class Time12
 
 
 			difference = hoursDifToMins + minutesDif;
-			}catch(InvalidTimeException e)
-        		 {
-          			  System.out.println("Time");
-       			 }
 		
 		// end of your code
 		return difference;
