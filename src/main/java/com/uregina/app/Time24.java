@@ -47,26 +47,36 @@ public class Time24
 	 */
 	public static Time24 toTime24(int hours, int minutes, AmPm am_pm)
 	{
-		Time24 time=null;
+		Time24 time = null; 
 		//Todo : add your code here
+		int hour24;
+		int minute24;
 		if(am_pm == AmPm.am){
 			if(hours == 12){
-				time.hours = 0;
-				time.minutes = minutes;
+				hour24 = 0;
+				minute24 = minutes;
 			}else{
-			time.hours = hours;
-			time.minutes = minutes;
+				hour24 = hours;
+				minute24 = minutes;
 			}
 		}else{
 			if(hours == 12){
-				time.hours = 12;
-				time.minutes = minutes;
+				hour24 = 12;
+				minute24 = minutes;
 			}else{
-				time.hours = hours + 12; 
-				time.minutes = minutes;
-			}	
-		}
+				hour24 = hours + 12; 
+				minute24 = minutes;
+			}
 
+		}
+		try
+        {
+			Time24 timed= new Time24(hour24, minute24);
+			return timed;
+		}catch(InvalidTimeException e)
+        {
+            System.out.println("Time");
+        }
 		// End of your code
 		return time;
 	}
