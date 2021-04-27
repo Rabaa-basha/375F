@@ -91,7 +91,7 @@ public class Time12
 			int minutesDif = minutes1 - minutes2;
 			
 
-			int hoursDifToMins = hoursdif * 60;
+			int hoursDifToMins = hoursDif * 60;
 
 
 			difference = hoursDifToMins + minutesDif;
