@@ -364,9 +364,11 @@ public class AppTest
 	    	
 		DateTime d1 = new DateTime(date1, time121);
 		DateTime d2 = new DateTime(date2, time122);	
-		
+		try{
 		int answer = DateTime.subtract(d1,d2);
 	        assertEquals( -1, answer);
+		}catch(MoreThanOneDayException e){
+		}
 	    }
 	    catch(InvalidTimeException e){
 	    }
@@ -393,9 +395,12 @@ public class AppTest
 		Time12 time122 = new Time12( 12, 1, AmPm.am);
 	    	
 		DateTime d1 = new DateTime(date1, time121);
-		DateTime d2 = new DateTime(date2, time122);	
+		DateTime d2 = new DateTime(date2, time122);
+			try{
 		int answer = DateTime.subtract(d1,d2);
 	        assertEquals( -2, answer);
+			}catch(MoreThanOneDayException e){
+			}
 	    }
 	    catch(InvalidTimeException e){
 	    }
