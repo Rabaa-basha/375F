@@ -2,6 +2,8 @@ package com.uregina.app;
 import com.uregina.exceptions.*;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.junit.Test;
 
@@ -423,8 +425,8 @@ public class AppTest
 	    	Time12 depT = new Time12( 1, 1, AmPm.pm);
 		Time12 arrT = new Time12( 1, 2, AmPm.pm);
 	    	
-		DateTime d1 = new DateTime(date1, time121);
-		DateTime d2 = new DateTime(date2, time122);	
+		DateTime d1 = new DateTime(depD, depT);
+		DateTime d2 = new DateTime(arrD, arrT);	
 		
 		Flight flight = new Flight("YQR", "AB", d1, d2);
 		ArrayList<Flight> ticket= new ArrayList<Flight>();
