@@ -348,6 +348,62 @@ public class AppTest
             System.out.println("Date");
         }
     }
+	
+	
+   @Test
+    public void DateTime_Subtract_SameDay()
+    {
+    	try
+        {
+	    	Date date1 = new Date( 1, 1, 2022);
+		Date date2 = new Date( 1, 1, 2022);
+		try
+        	{
+	    	Time12 time121 = new Time12( 1, 1, AmPm.pm);
+		Time12 time122 = new Time12( 1, 2, AmPm.pm);
+	    	
+		DateTime d1 = new DateTime(date1, time121);
+		DateTime d2 = new DateTime(date2, time122);	
+		
+	        assertEquals( -1, answer);
+	    }
+	    catch(InvalidTimeException e){
+	    }
+	}
+	    catch(InvalidDateException e)
+        {
+            System.out.println("Date");
+        }
+    }
+	
+	
+	
+	
+   @Test
+    public void DateTime_Subtract_ConsDay()
+    {
+    	try
+        {
+	    	Date date1 = new Date( 1, 1, 2022);
+		Date date2 = new Date( 1, 2, 2022);
+		try
+        	{
+	    	Time12 time121 = new Time12( 11, 59, AmPm.pm);
+		Time12 time122 = new Time12( 12, 1, AmPm.am);
+	    	
+		DateTime d1 = new DateTime(date1, time121);
+		DateTime d2 = new DateTime(date2, time122);	
+		
+	        assertEquals( -2, answer);
+	    }
+	    catch(InvalidTimeException e){
+	    }
+	}
+	    catch(InvalidDateException e)
+        {
+            System.out.println("Date");
+        }
+    }
 }
 
 
