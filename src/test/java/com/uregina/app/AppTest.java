@@ -365,6 +365,7 @@ public class AppTest
 		DateTime d1 = new DateTime(date1, time121);
 		DateTime d2 = new DateTime(date2, time122);	
 		
+		int answer = DateTime.subtract(d1,d2);
 	        assertEquals( -1, answer);
 	    }
 	    catch(InvalidTimeException e){
@@ -393,7 +394,7 @@ public class AppTest
 	    	
 		DateTime d1 = new DateTime(date1, time121);
 		DateTime d2 = new DateTime(date2, time122);	
-		
+		int answer = DateTime.subtract(d1,d2);
 	        assertEquals( -2, answer);
 	    }
 	    catch(InvalidTimeException e){
