@@ -410,6 +410,39 @@ public class AppTest
             System.out.println("Date");
         }
     }
+	
+ @Test
+    public void Flight_False_String()
+    {
+	    try
+        {
+	    	Date depD = new Date( 1, 1, 2022);
+		Date arrD = new Date( 1, 1, 2022);
+		try
+        	{
+	    	Time12 depT = new Time12( 1, 1, AmPm.pm);
+		Time12 arrT = new Time12( 1, 2, AmPm.pm);
+	    	
+		DateTime d1 = new DateTime(date1, time121);
+		DateTime d2 = new DateTime(date2, time122);	
+		
+		Flight flight = new Flight("YQR", "AB", d1, d2);
+		ArrayList<Flight> ticket= new ArrayList<Flight>();
+		ticket.add(flight);
+		Ticket.checkTicket(ticket, 2, 2000, 2000, 2000, True);
+		assertEquals( true, answer);
+	    }
+	    catch(InvalidTimeException e){
+	    }
+	}
+	    catch(InvalidDateException e)
+        {
+            System.out.println("Date");
+        }
+    	
+    }
+	
+	
 }
 
 
