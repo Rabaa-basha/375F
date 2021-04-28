@@ -431,7 +431,7 @@ public class AppTest
 		Flight flight = new Flight("YQR", "AB", d1, d2);
 		ArrayList<Flight> ticket= new ArrayList<Flight>();
 		ticket.add(flight);
-		Ticket.checkTicket(ticket, 2, 2000, 2000, 2000, True);
+		boolean answer = Ticket.checkTicket(ticket, 2, 2000, 2000, 2000, True);
 		assertEquals( true, answer);
 	    }
 	    catch(InvalidTimeException e){
