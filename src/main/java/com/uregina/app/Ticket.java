@@ -46,7 +46,7 @@ public class Ticket
 		for(int i=0 ; i<ticket.size(); i++){
 			String oneS = ticket.get(i).getArrivalAirport();
 			String twoS = ticket.get(i).getDepatureAirport();
-			int sumOne = ticket.get(i).calculateFlightTime();
+
 			if(i<ticket.size() - 1){
 				sumTwo += Flight.calculateLayoverTime(ticket.get(i), ticket.get(i+1));
 				sumOne += ticket.get(i).calculateFlightTime();
@@ -57,7 +57,7 @@ public class Ticket
 			}
 			for(int j=0 ; j<3; j++){
 				char a = oneS.charAt(i);
-				if(isUpperCase(a) == false){
+				if(Character.isUpperCase(a) == false){
 					return false;
 				}
 			}
@@ -67,18 +67,12 @@ public class Ticket
 			}
 			for(int j=0 ; j<3; j++){
 				char a = twoS.charAt(i);
-				if(isUpperCase(a) == false){
+				if(Character.isUpperCase(a) == false){
 					return false;
 				}
 			}
 			
-			if(maxFlightTime < one){
-				return false;
-			}
 			
-			if(maxLayoverTime < two){
-				return false;
-			}
 		}
 		if(maxFlightTime < sumOne){
 			return false;	
