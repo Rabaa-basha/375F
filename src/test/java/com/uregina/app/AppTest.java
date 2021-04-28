@@ -398,7 +398,7 @@ public class AppTest
 		DateTime d2 = new DateTime(date2, time122);
 			try{
 		int answer = DateTime.subtract(d1,d2);
-	        assertEquals( -2, answer);
+	        assertEquals( 1438, answer);
 			}catch(MoreThanOneDayException e){
 			}
 	    }
