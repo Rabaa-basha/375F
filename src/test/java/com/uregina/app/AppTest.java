@@ -224,6 +224,130 @@ public class AppTest
             System.out.println("Time");
         }
     }
+	
+	
+   @Test
+    public void Date_Lessthan_year1_is_less()
+    {
+    	try
+        {
+	    	Date date1 = new Date( 1, 1, 2021);
+		Date date2 = new Date( 2, 2, 2022);
+	    	boolean answer = Date.lessThan(date1, date2);
+		
+	        assertEquals( true, answer);
+	    }
+	    catch(InvalidDateException e)
+        {
+            System.out.println("Date");
+        }
+    }
+	
+ @Test
+    public void Date_Lessthan_year1_is_equal_momnth1isless()
+    {
+    	try
+        {
+	    	Date date1 = new Date( 1, 1, 2021);
+		Date date2 = new Date( 2, 1, 2021);
+	    	boolean answer = Date.lessThan(date1, date2);
+		
+	        assertEquals( true, answer);
+	    }
+	    catch(InvalidDateException e)
+        {
+            System.out.println("Date");
+        }
+    }
+	
+	
+	 @Test
+    public void Date_Lessthan_year1_is_equal_momnth1ismore()
+    {
+    	try
+        {
+	    	Date date1 = new Date( 3, 1, 2021);
+		Date date2 = new Date( 2, 1, 2021);
+	    	boolean answer = Date.lessThan(date1, date2);
+		
+	        assertEquals( false, answer);
+	    }
+	    catch(InvalidDateException e)
+        {
+            System.out.println("Date");
+        }
+    }
+	
+	
+	 @Test
+    public void Date_Lessthan_year1_is_equal_momnth1iseqaual()
+    {
+    	try
+        {
+	    	Date date1 = new Date( 1, 1, 2021);
+		Date date2 = new Date( 1, 1, 2021);
+	    	boolean answer = Date.lessThan(date1, date2);
+		
+	        assertEquals( false, answer);
+	    }
+	    catch(InvalidDateException e)
+        {
+            System.out.println("Date");
+        }
+    }
+	
+	
+	 @Test
+    public void Date_Lessthan_year1_is_equal_momnth1iseqaual_d1isless()
+    {
+    	try
+        {
+	    	Date date1 = new Date( 1, 1, 2021);
+		Date date2 = new Date( 1, 2, 2021);
+	    	boolean answer = Date.lessThan(date1, date2);
+		
+	        assertEquals( true, answer);
+	    }
+	    catch(InvalidDateException e)
+        {
+            System.out.println("Date");
+        }
+    }
+	
+	
+	 @Test
+    public void Date_Lessthan_year1_is_equal_momnth1iseqaual_d1ismore()
+    {
+    	try
+        {
+	    	Date date1 = new Date( 1, 3, 2021);
+		Date date2 = new Date( 1, 2, 2021);
+	    	boolean answer = Date.lessThan(date1, date2);
+		
+	        assertEquals( false, answer);
+	    }
+	    catch(InvalidDateException e)
+        {
+            System.out.println("Date");
+        }
+    }
+	
+   @Test
+    public void Date_Lessthan_year1_ismore()
+    {
+    	try
+        {
+	    	Date date1 = new Date( 1, 3, 2022);
+		Date date2 = new Date( 1, 2, 2021);
+	    	boolean answer = Date.lessThan(date1, date2);
+		
+	        assertEquals( false, answer);
+	    }
+	    catch(InvalidDateException e)
+        {
+            System.out.println("Date");
+        }
+    }
 }
 
 
