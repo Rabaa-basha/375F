@@ -428,10 +428,10 @@ public class AppTest
 		DateTime d1 = new DateTime(depD, depT);
 		DateTime d2 = new DateTime(arrD, arrT);	
 		
-		Flight flight = new Flight("YQR", "AB", d1, d2);
+		Flight flight = new Flight("YQR", "ABC", d1, d2);
 		ArrayList<Flight> ticket= new ArrayList<Flight>();
 		ticket.add(flight);
-		boolean answer = Ticket.checkTicket(ticket, 2, 2000, 2000, 2000, True);
+		boolean answer = Ticket.checkTicket(ticket, 2, 2000, 2000, 2000, true);
 		assertEquals( true, answer);
 	    }
 	    catch(InvalidTimeException e){
