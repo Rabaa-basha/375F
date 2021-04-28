@@ -47,9 +47,12 @@ public class Ticket
 			String oneS = ticket.get(i).getArrivalAirport();
 			String twoS = ticket.get(i).getDepatureAirport();
 
+			try{
 			if(i<ticket.size() - 1){
 				sumTwo += Flight.calculateLayoverTime(ticket.get(i), ticket.get(i+1));
 				sumOne += ticket.get(i).calculateFlightTime();
+			}}catch(MoreThanOneDayException | NegativeTimeException ex){
+			     
 			}
 			
 			if(oneS.length() != 3){
