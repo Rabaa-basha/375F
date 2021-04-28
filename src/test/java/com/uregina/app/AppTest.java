@@ -155,75 +155,75 @@ public class AppTest
 //     }
 
 	
-//    @Test
-//     public void Subtract_h2_moreThan_h1()
-//     {
-//     	try
-//         {
-// 	    	Time12 time121 = new Time12( 1, 2, AmPm.pm);
-// 		Time12 time122 = new Time12( 2, 2, AmPm.pm);
-// 	    	int answer = subtract(time121, time122);
+   @Test
+    public void Subtract_h2_moreThan_h1()
+    {
+    	try
+        {
+	    	Time12 time121 = new Time12( 1, 2, AmPm.pm);
+		Time12 time122 = new Time12( 2, 2, AmPm.pm);
+	    	int answer = Time12.subtract(time121, time122);
 		
-// 	        assertEquals( -60, answer);
-// 	    }
-// 	    catch(InvalidTimeException e)
-//         {
-//             System.out.println("Time");
-//         }
-//     }
+	        assertEquals( -60, answer);
+	    }
+	    catch(InvalidTimeException e)
+        {
+            System.out.println("Time");
+        }
+    }
 	
-//    @Test
-//     public void Subtract_h1_moreThan_h2()
-//     {
-//     	try
-//         {
-// 	    	Time12 time121 = new Time12( 2, 2, AmPm.pm);
-// 		Time12 time122 = new Time12( 1, 2, AmPm.pm);
-// 	    	int answer = subtract(time121, time122);
+   @Test
+    public void Subtract_h1_moreThan_h2()
+    {
+    	try
+        {
+	    	Time12 time121 = new Time12( 2, 2, AmPm.pm);
+		Time12 time122 = new Time12( 1, 2, AmPm.pm);
+	    	int answer = Time12.subtract(time121, time122);
 		
-// 	        assertEquals( 60, answer);
-// 	    }
-// 	    catch(InvalidTimeException e)
-//         {
-//             System.out.println("Time");
-//         }
-//     }
+	        assertEquals( 60, answer);
+	    }
+	    catch(InvalidTimeException e)
+        {
+            System.out.println("Time");
+        }
+    }
 	
 	
-//    @Test
-//     public void Subtract_m2_moreThan_m1()
-//     {
-//     	try
-//         {
-// 	    	Time12 time121 = new Time12( 1, 1, AmPm.pm);
-// 		Time12 time122 = new Time12( 1, 2, AmPm.pm);
-// 	    	int answer = subtract(time121, time122);
+   @Test
+    public void Subtract_m2_moreThan_m1()
+    {
+    	try
+        {
+	    	Time12 time121 = new Time12( 1, 1, AmPm.pm);
+		Time12 time122 = new Time12( 1, 2, AmPm.pm);
+	    	int answer = Time12.subtract(time121, time122);
 		
-// 	        assertEquals( -1, answer);
-// 	    }
-// 	    catch(InvalidTimeException e)
-//         {
-//             System.out.println("Time");
-//         }
-//     }
+	        assertEquals( -1, answer);
+	    }
+	    catch(InvalidTimeException e)
+        {
+            System.out.println("Time");
+        }
+    }
 	
 	
-//    @Test
-//     public void Subtract_m1_moreThan_m1()
-//     {
-//     	try
-//         {
-// 	    	Time12 time121 = new Time12( 1, 2, AmPm.pm);
-// 		Time12 time122 = new Time12( 1, 1, AmPm.pm);
-// 	    	int answer = subtract(time121, time122);
+   @Test
+    public void Subtract_m1_moreThan_m1()
+    {
+    	try
+        {
+	    	Time12 time121 = new Time12( 1, 2, AmPm.pm);
+		Time12 time122 = new Time12( 1, 1, AmPm.pm);
+	    	int answer = Time12.subtract(time121, time122);
 		
-// 	        assertEquals( 1, answer);
-// 	    }
-// 	    catch(InvalidTimeException e)
-//         {
-//             System.out.println("Time");
-//         }
-//     }
+	        assertEquals( 1, answer);
+	    }
+	    catch(InvalidTimeException e)
+        {
+            System.out.println("Time");
+        }
+    }
 }
 
 
