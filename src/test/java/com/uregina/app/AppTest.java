@@ -414,7 +414,7 @@ public class AppTest
     }
 	
  @Test
-    public void Flight_False_String()
+    public void Flight_True_String()
     {
 	    try
         {
